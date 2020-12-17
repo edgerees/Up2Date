@@ -1,0 +1,28 @@
+<%- include('../partials/nav', {active: "Headlines"}); %>
+<div><h1>Top Headlines</h1></div>
+<div class="wrappers">
+    <div class="news">
+        <% if(articles != null) { %>
+        <% articles.forEach(function(article, index) { %>
+            <a href="<%- article.url %>" class="news__card">
+                <img src="<%- article.urlToImage %>" alt="<%- article.title %>">
+                <h2><%- article.title %></h2>
+                <p><%- article.description %></p> 
+                <p><%- article.source.name %></p>
+                <p><%- article.publishedAt %></p> 
+                 <form method="POST" action="/news/userArticles">
+<input type="hidden" id="articleTitle" name="articleTitle" value="<%= article.title %>">
+<input type="hidden" id="articleDescription" name="articleDescription" value="<%= article.description %>">
+<input type="hidden" id="articleImage" name="articleImage" value="<%= article.urlToImage %>">
+<input type="hidden" id="articleUrl" name="articleUrl" value="<%= article.url %>">
+<input type="hidden" id="articlePublishedAt" name="articlePublishedAt" value="<%= article.publishedAt %>">
+<input type="submit" class="myButton" value="Save">
+</form>
+            </a>
+
+        <% }) %>
+        <% } else { %>
+            No posts found.
+        <% } %>
+    </div>
+</div>  

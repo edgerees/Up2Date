@@ -1,0 +1,10 @@
+<ul class="nav">
+    <li><a <%if(active=="Headlines"){%>class="active"<%}%> href="/news/news">Top Headlines</a></li>
+    <li><a <%if(active=="Sports"){%>class="active"<%}%> href="/news/sports">Sports</a></li>
+    <li><a <%if(active=="Entertainment"){%>class="active"<%}%> href="/news/entertainment">Entertainment</a></li>
+    <li><a <%if(active=="Saved"){%>class="active"<%}%> href="/news/userarticles">Saved Articles</a></li>
+<li><form class="searchf" action="./search" method="GET">
+    <input type="text" class="formsearch" name="search" aria-label="Search" placeholder="search for news" id="search" required>
+    <input type="submit" class="btnsearch" value="search">
+    </form></li>
+</ul>

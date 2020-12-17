@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Up2Date</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header">  
+      <img class ="logo2" src="/img/smallerlogo.png" alt="Logo"  />   
+          <nav class="login"> 
+        <ul class="loginul">
+          <% if (!currentUser) { %>
+            <li><a href="/auth/signup">Signup</a></li>
+            <li><a href="/auth/login">Login</a></li>
+          <% } else {%>
+            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/profile">Profile</a></li>
+          <% } %>
+        </ul>
+      </nav> 
+    </header>
+    <% if (!currentUser) { %>
+      <div class="create1"><h4 class="create">Login/Signup to save your favorite articles.</h6></div>
+    <% } else {%>
+    <% } %>
+    <%- body %>
+  </body>
+</html>
+
