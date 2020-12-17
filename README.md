@@ -1,2 +1,2 @@
 # Up2Date
-Website that pulls headlines from major news outlets around the web all in one place. 
+roject 2 (Final) - News App that uses Node JS, Express, Axios, PG, SQL, NewsAPI, Passport, Flash and other NPM packages. 
